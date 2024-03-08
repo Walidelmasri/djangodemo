@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;}
+{\colortbl;\red255\green255\blue255;\red189\green198\blue208;\red12\green14\blue18;\red109\green109\blue109;
+}
+{\*\expandedcolortbl;;\cssrgb\c78824\c81961\c85098;\cssrgb\c5098\c6667\c9020;\cssrgb\c50196\c50196\c50196;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth6631\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth6631\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 body\{\
+    font-family: 'Coiny', cursive;\
+\}\
+\
+.carousel-inner .carousel-caption\{\
+    padding-bottom: 170px;\
+\}\
+.carousel-inner .carousel-caption h1\{\
+    font-size: 52px;\
+\}\
+\
+.carousel-inner .carousel-caption .button\{\
+    font-weight: 500;\
+    font-size: 16px;\
+    letter-spacing: 1px;\
+    display: inline-block;\
+    padding: 10px 30px;\
+    border-radius: 50px;\
+    transition: 0.5s;\
+    border: 2px solid #3489bd;\
+    text-decoration: none;\
+    background-color: #3489bd;\
+    color: #fff;\
+\}\
+\
+/* animated css */\
+.animate__animated.animate__zoomIn\{\
+    --animate-delay: 1.7s;\
+    --animate-duration: 1.2s\
+\}\
+.animate__animated.animate__bounce\{\
+    --animate-delay: 1s;\
+    --animate-duration: 1.5s\
+\}\
+\
+.animate__animated.animate__fadeInDown\{\
+    --animate-delay: 1s;\
+    --animate-duration: 1.5s\
+\}\
+\
+.animate__animated.animate__fadeInRight\
+\{\
+    --animate-delay: 1s;\
+    --animate-duration: 1.5s\
+\}\cell \lastrow\row}

@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+
+{% block title %} Blogs {% endblock %}
+
+{% block css %}
+.edit{
+float: right;
+}
+.delete{
+float: right;
+}
+.new_footer_area {
+    background: #fbfbfd;
+}
+
+
+.new_footer_top {
+    padding: 120px 0px 270px;
+    position: relative;
+      overflow-x: hidden;
+}
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+.btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.ti-facebook:before {
+    content: "\e741";
+}
+.ti-twitter-alt:before {
+    content: "\e74b";
+}
+.ti-vimeo-alt:before {
+    content: "\e74a";
+}
+.ti-pinterest:before {
+    content: "\e731";
+}
+
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: #fff;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    border-color: #5e2ced;
+  color:white;
+}
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://1.bp.blogspot.com/-mvKUJFGEc-k/XclCOUSvCnI/AAAAAAAAUAE/jnBSf6Fe5_8tjjlKrunLBXwceSNvPcp3wCLcBGAsYHQ/s1600/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+  background-size:100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+  background-size:100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+{% endblock %}
+{% block body %}
+{% load humanize %}
+<div class="container w-75 my-4">
+      <h2 class="blog-post-title">{{post.title}}</h2>
+      <br>
+      <div class="media">
+            {% if post.author.profile.image %}
+            <img class="mr-3 rounded-circle" src="{{post.author.profile.image.url}}" width="50px" height="50px"
+                  alt="image">
+            {% endif %}
+            <div class="media-body">
+                  <h5 class="mt-0"><a href="/user_profile/{{post.author.id}}/">{{post.author | capfirst}}
+                            {% if user.is_superuser %}
+                                <a href="/delete_blog_post/{{post.slug}}/" class="delete btn btn-danger mx-4">Delete Blog</a>
+                            {% endif %}
+                            {% if user.is_authenticated %}
+                                {% if user.id == post.author.id %}
+                                    <small><a href="/edit_blog_post/{{post.slug}}/" class="edit btn btn-warning">Edit Blog Post</a></small>
+                                {% endif %}
+                            {% endif %}
+                        </a>
+                        </h5>
+
+                  {{post.dateTime}}
+            </div>
+      </div>
+      <br>
+      <img src="/media/{{post.image}}" alt="" height="350px" width="100%">
+      <br>
+      <p>{{post.content}}.</p>
+      <hr>
+      {% if user.is_authenticated %}
+      <div class="container">
+            <h2>Add Comments Here</h2>
+            <form action="/blog/{{post.slug}}/" method="POST"> {% csrf_token %}
+                  <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                              style="height: 100px" id="content" name="content"></textarea>
+                        <label for="floatingTextarea2">Leave a comment here.</label>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Comment</button>
+                  </div>
+            </form>
+            {% else %}
+            <div class="container">
+                  <h4><a href="/login/">Login</a> to post comments below.</h4>
+                  {% endif %}
+                  <br>
+                  <h2>All Comments ({{comments.count}})</h2>
+                  <br>
+                  {% for comment in comments %}
+                  <div class="card1">
+                        <div class="card-header">
+                              <span style="font-size: 22px;">{{comment.user | capfirst}} </span> <span
+                                    style="font-size: 12px;">{{comment.dateTime | naturaltime}}</span>
+                            <div class="card-body1">
+                                <h6 class="card-text1">{{comment.content}}</h6>
+                            </div>
+                        </div>
+
+                  </div>
+                  <br>
+                  {% endfor %}
+            </div>
+      </div>
+
+      {% endblock %}

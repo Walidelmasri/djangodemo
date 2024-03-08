@@ -1,0 +1,635 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Abdullah Al-Orsan Group for Real Estate {% endblock %}
+{% block homeactive %} active {% endblock homeactive %}
+
+{% block css %}
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+.greybanner{
+background-color: #303030;
+}
+
+.carousel-inner .carousel-caption{
+    padding-bottom: 170px;
+}
+.carousel-inner .carousel-caption h1{
+    font-size: 52px;
+}
+
+.carousel-inner .carousel-caption .button{
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    border: 2px solid #3489bd;
+    text-decoration: none;
+    background-color: #3489bd;
+    color: #fff;
+}
+
+/* animated css */
+.animate__animated.animate__zoomIn{
+    --animate-delay: 1.7s;
+    --animate-duration: 1.2s
+}
+.animate__animated.animate__bounce{
+    --animate-delay: 1s;
+    --animate-duration: 1.5s
+}
+
+.animate__animated.animate__fadeInDown{
+    --animate-delay: 1s;
+    --animate-duration: 1.5s
+}
+
+.animate__animated.animate__fadeInRight
+{
+    --animate-delay: 1s;
+    --animate-duration: 1.5s
+}
+#page-wrap {
+	position: relative;
+	display: block;
+	clear: both;
+	background: none;
+	color: #000;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+}
+#inner-wrap {
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	right: 0;
+	bottom: 3rem;
+	display: table;
+	width: 100%;
+	height: 100%;
+	min-height: 322px;
+	overflow: visible;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
+.credits {
+	position: relative;
+	z-index: 9;
+	font-size: 130%;
+	text-align: center;
+	width: 100%;
+	padding: 2rem 0;
+}
+.credits a {
+	display: inline-block;
+	color: #df1888;
+	font-family: Arial, sans-serif;
+	line-height: 1.5em;
+	text-decoration: none !important;
+	white-space: nowrap;
+	margin: 0 1.2em;
+	padding: 0.6em 0;
+	transition: 150ms;
+}
+.credits a:hover {
+	color: #2d71b9;
+	cursor: pointer;
+}
+.credits-logo {
+	fill: currentColor;
+	display: inline-block;
+	vertical-align: bottom;
+	width: 1.6em;
+	height: 1.6em;
+	margin: 0 0.5em 0 0;
+}
+:root {
+  --color: #3c3163;
+  --transition-time: 0.5s;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+}
+.cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+.card {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height: 20em;
+  width: 15em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 5em -1em black;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+.card:hover {
+  transform: rotate(0);
+}
+.card h4 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.card p {
+  font-size: 0.75em;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+.card .tags {
+  display: flex;
+}
+.card .tags .tag {
+  font-size: 0.75em;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+.card:hover .tags .tag {
+  background: var(--color);
+  color: white;
+}
+.card .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: .8;
+}
+.card:before, .card:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+.card:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+.card:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+.card:hover {
+  color: var(--color);
+}
+.card:hover:before, .card:hover:after {
+  transform: scale(1);
+}
+.card-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+.info h4 {
+  font-size: 1em;
+  font-weight: normal;
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .card-grid-space .num {
+    /margin-left: 0;
+    /text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .card {
+    max-width: calc(100vw - 4rem);
+  }
+}
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h4 {
+    margin: 0;
+  }
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  /* Full height */
+  height: 600px;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.parallaxmain {
+  /* The image used */
+  background-image: url("https://images.pexels.com/photos/7245333/pexels-photo-7245333.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  /* Full height */
+  height: 600px;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.new_footer_area {
+    background: #fbfbfd;
+}
+
+
+.new_footer_top {
+    padding: 120px 0px 270px;
+    position: relative;
+      overflow-x: hidden;
+}
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #7f88a6;
+    padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+.btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+.new_footer_top .f_social_icon a {
+    width: 44px;
+    height: 44px;
+    line-height: 43px;
+    background: transparent;
+    border: 1px solid #e2e2eb;
+    font-size: 24px;
+}
+.f_social_icon a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 45px;
+    color: #858da8;
+    display: inline-block;
+    background: #ebeef5;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.ti-facebook:before {
+    content: "\e741";
+}
+.ti-twitter-alt:before {
+    content: "\e74b";
+}
+.ti-vimeo-alt:before {
+    content: "\e74a";
+}
+.ti-pinterest:before {
+    content: "\e731";
+}
+
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #5e2ced;
+    border-color: #5e2ced;
+    color: #fff;
+}
+
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+
+.new_footer_top .f_social_icon a:hover {
+    background: #5e2ced;
+    border-color: #5e2ced;
+  color:white;
+}
+.new_footer_top .f_social_icon a + a {
+    margin-left: 4px;
+}
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+h2{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://1.bp.blogspot.com/-mvKUJFGEc-k/XclCOUSvCnI/AAAAAAAAUAE/jnBSf6Fe5_8tjjlKrunLBXwceSNvPcp3wCLcBGAsYHQ/s1600/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+  background-size:100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+  background-size:100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+{% endblock %}
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+{% block body %}
+         <!-- slider section -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            {% for object in carousel%}
+            <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
+                <img src="{{object.image.url}}" style="height:650px;" class="testi-overly d-block w-100" alt="sliderImg">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1 class="animate__animated
+                    {% if forloop.counter0 == 0 %}
+                    animate__fadeInDown
+                    {% endif %}
+                    {% if forloop.revcounter == 1 %}
+                    animate__bounce
+                    {% endif %}
+                    {% if forloop.revcounter == 2 %}
+                    animate__fadeInRight
+                    {% endif %}">{{object.title}}</h1>
+                    <h3 class="animate__animated animate__zoomIn">{{object.sub_title}}</h3>
+                    <a href="{{object.link}}" class="button animate__animated animate__zoomIn mt-3 py-3 px-5 btn font-weight-bold">{{object.action_name}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+<!--<div class="parallaxmain"></div>-->
+<br>
+<h2>Latest News</h2>
+
+<div class="container mt-5 mb-3">
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-lg-4 my-4">
+          <div class="card-grid-space">
+    <a class="card" href="blog/{{post.slug}}" style="--bg-img: url(/media/{{post.image}})">
+      <div>
+        <h4><br>{{post.title}}</h4>
+        <p>{{post.content| truncatechars:100}}</p>
+        <div class="date">{{post.dateTime}}</div>
+        
+        <div class="tags">
+          <div class="tag"><small>by {{post.author | capfirst}}</small></div>
+        </div>
+      </div>
+    </a>
+    
+  </div>
+
+  {% comment %}
+            <div class="card shadow" style="width: 20rem; height: 33rem;">
+                <img src="/media/{{post.image}}" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                  <h5 class="card-title">{{post.title}} <br><small>by {{post.author | capfirst}}</small></h5>
+                  <p class="card-text">{{post.content| truncatechars:210}}</p>
+                  <a href="blog/{{post.slug}}" class="btn btn-primary">Read More {% if user.is_superuser %}<a href="delete_blog_post/{{post.slug}}/" class="btn btn-danger mx-4">Delete Blog</a>{% endif %}</a>
+                </div>
+              </div>
+  {% endcomment %}
+
+        </div> 
+        {% endfor %}
+    </div>
+</div>
+<h2>What Do We Do?</h2>
+<div class="container mt-5 mb-3">
+
+<p style= "font-size: 28px;">What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+   It has survived not only five centuries, but also the leap into electronic typesetting,
+    remaining essentially unchanged. It was popularised in the 1960s with the release of
+     Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+     publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+     </div>
+
+<br><br>
+  <div class="parallax"><br><br><h2>Our Aim</h2>
+  <div class="container mt-5 mb-3">
+  <p style= "font-size: 28px;">What is Lorem Ipsum?
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+     It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of
+       Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+       publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+       </div>
+  </div>
+  <br><br>
+
+    <div class="greybanner">
+    <p style="color: white; font-size: 28px; text-align: center;"><br>Follow Abdullah Al-Orsan Group<br><br>
+                                <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft; text-align:center;">
+                                    <div class="smicon">
+                                        <a href="#"><img src="/static/ig.png" height="40px" style="margin: 5px;"></a>
+                                        <a href="#"><img src="/static/fb.png" height="40px" style="margin: 5px;"></a>
+                                        <a href="#"><img src="/static/twitter.png" height="40px" style="margin: 5px;"></a>
+                                        <a href="#"><img src="/static/youtube.png" height="40px" style="margin: 5px;"></a>
+                                        <a href="#"><img src="/static/linkedin.png" height="40px" style="margin: 5px;"></a>
+
+                                </div>
+                            </div>
+    <br><br><br>
+    </p>
+    </div>
+{% endblock %}
+{% block js %} 
+<script></script>
+{% endblock %}
